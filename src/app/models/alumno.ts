@@ -1,6 +1,6 @@
 export interface Alumno{
     nombre: String;
-    nota: String;
+    edad: String;
     curso: String;
-    fecha_incripcion: Date;
+    matriculado: String;
 }

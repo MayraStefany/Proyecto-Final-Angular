@@ -1,5 +1,4 @@
 import { Component } from '@angular/core';
-import { MatTableDataSource } from '@angular/material/table';
 import { Alumno } from 'src/app/models/alumno';
 
 @Component({
@@ -17,5 +16,4 @@ export class AlumnosComponent {
     {nombre: 'Lu', edad: '19', curso: 'Cloud Computing', profesor: 'Alex'},
     {nombre: 'Melanie', edad: '22', curso: 'React', profesor: 'Alexandra'},
   ];
-  dataSource: MatTableDataSource<Alumno> = new MatTableDataSource<Alumno>(this.alumnos);
 }

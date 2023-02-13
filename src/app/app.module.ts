@@ -4,20 +4,23 @@ import { BrowserModule } from '@angular/platform-browser';
 import { AppComponent } from './app.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AlumnosComponent } from './components/alumnos/alumnos.component';
+import { MaterialModule } from './material.module';
+import {MatButtonModule} from '@angular/material/button';
+import { EditarAlumnoDialogComponent } from './components/editar-alumno-dialog/editar-alumno-dialog.component';
 
-import { MatTableModule } from '@angular/material/table';
-import {MatCardModule} from '@angular/material/card';
+
 
 @NgModule({
   declarations: [
     AppComponent,
-    AlumnosComponent
+    AlumnosComponent,
+    EditarAlumnoDialogComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
-    MatTableModule,
-    MatCardModule
+    MaterialModule,
+    MatButtonModule
   ],
   providers: [],
   bootstrap: [AppComponent]

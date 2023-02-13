@@ -9,6 +9,7 @@ import {MatButtonModule} from '@angular/material/button';
 import { EditarAlumnoDialogComponent } from './components/editar-alumno-dialog/editar-alumno-dialog.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
+import { NombresYApellidosPipe } from './pipes/nombres-y-apellidos.pipe';
 
 
 
@@ -17,7 +18,8 @@ import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
     AppComponent,
     AlumnosComponent,
     EditarAlumnoDialogComponent,
-    FormatoFechaPipe
+    FormatoFechaPipe,
+    NombresYApellidosPipe
   ],
   imports: [
     BrowserModule,

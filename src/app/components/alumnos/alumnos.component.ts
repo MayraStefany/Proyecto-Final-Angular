@@ -2,6 +2,7 @@ import { Component } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Alumno } from 'src/app/models/alumno';
 import { EditarAlumnoDialogComponent } from '../editar-alumno-dialog/editar-alumno-dialog.component';
+import { MatTableDataSource } from '@angular/material/table';
 
 @Component({
   selector: 'app-alumnos',
@@ -12,7 +13,9 @@ export class AlumnosComponent {
   filtro: string = '';
   alumnos: Alumno[] =[
     {
+      id:1,
       nombre: 'Maru', 
+      apellido: 'Lezama',
       edad: '17', 
       curso: 'Diseño UX', 
       profesor: {
@@ -24,7 +27,9 @@ export class AlumnosComponent {
       fechaInicioCurso: new Date(2023,3,5,20,30,0)
     },
     {
+      id:2,
       nombre: 'Mayra',
+      apellido: 'Torres',
       edad: '20',
       curso: 'Ciberseguridad', 
       profesor: {
@@ -36,7 +41,9 @@ export class AlumnosComponent {
       fechaInicioCurso: new Date(2023,3,4,20,30,0)
     },
     {
+      id:3,
       nombre: 'Maicol', 
+      apellido: 'Rodriguez',
       edad: '19', 
       curso: 'Python', 
       profesor: {
@@ -48,7 +55,9 @@ export class AlumnosComponent {
       fechaInicioCurso: new Date(2023,3,10,20,30,0)
     },
     {
+      id: 4,
       nombre: 'Moises', 
+      apellido: 'Ortega',
       edad: '18', 
       curso: 'Desarrollo de Videojuegos', 
       profesor: {
@@ -60,7 +69,9 @@ export class AlumnosComponent {
       fechaInicioCurso: new Date(2023,2,18,20,30,0)
     },
     {
+      id: 5,
       nombre: 'Lu', 
+      apellido: 'Pardo',
       edad: '19', 
       curso: 'Cloud Computing', 
       profesor: {
@@ -72,7 +83,9 @@ export class AlumnosComponent {
       fechaInicioCurso: new Date(2023,3,5,20,30,0)
     },
     {
+      id: 6,
       nombre: 'Melanie', 
+      apellido: 'Munares',
       edad: '22', 
       curso: 'React', 
       profesor: {
@@ -84,6 +97,10 @@ export class AlumnosComponent {
       fechaInicioCurso: new Date(2023,2,28,20,30,0)
     },
   ];
+
+  dataSource: MatTableDataSource<Alumno> = new MatTableDataSource<Alumno>(this.alumnos);
+  columnas: string[] = ['id','nombrecompleto', 'edad', 'curso', 'profesor', 'fecha a cursar','acciones'];
+
 
   constructor(
     private dialog: MatDialog

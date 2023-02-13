@@ -1,1 +1,22 @@
-<p>editar-alumno-dialog works!</p>
+<h1 mat-dialog-title>Editar Alumno</h1>
+
+<div mat-dialog-content>
+    <form [formGroup]="formulario">
+        <div class="row">
+            <input type="text" placeholder="Nombre" formControlName="nombre">
+        </div>
+        <div class="row">
+            <input type="text" placeholder="Edad" formControlName="edad">
+        </div>
+        <div class="row">
+            <input type="text" placeholder="Curso" formControlName="curso">
+        </div>
+        <div class="row">
+            <input type="text" placeholder="Profesor" formControlName="profesor">
+        </div>
+    </form>
+</div>
+<div mat-dialog-actions>
+    <button mat-button>Editar</button>
+    <button mat-button>Cancelar</button>
+</div>

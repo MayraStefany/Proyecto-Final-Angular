@@ -7,6 +7,8 @@ import { AlumnosComponent } from './components/alumnos/alumnos.component';
 import { MaterialModule } from './material.module';
 import {MatButtonModule} from '@angular/material/button';
 import { EditarAlumnoDialogComponent } from './components/editar-alumno-dialog/editar-alumno-dialog.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
 
 
 
@@ -14,13 +16,15 @@ import { EditarAlumnoDialogComponent } from './components/editar-alumno-dialog/e
   declarations: [
     AppComponent,
     AlumnosComponent,
-    EditarAlumnoDialogComponent
+    EditarAlumnoDialogComponent,
+    FormatoFechaPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
-    MatButtonModule
+    MatButtonModule,
+    ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

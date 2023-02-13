@@ -19,10 +19,13 @@
                 <img mat-card-image src="../../../assets/imgs/foto2_alum.jpg" alt="">
                 <mat-card-content>
                   <h1 class="text-curso">{{alumno.curso}}</h1>
-                  <p class="text-matriculado">Profesor(a): {{alumno.profesor}}</p>
+                  <p class="text-matriculado">Profesor(a): {{alumno.profesor.nombre}}</p>
+                  <p class="text-matriculado">Fecha a cursar: {{alumno.fechaInicioCurso | formatoFecha }}</p>
                 </mat-card-content>
                 <mat-card-actions align="end">
-                  <button mat-button color="primary">Editar</button>
+                  <button mat-button color="primary" (click)="editarmodal(alumno)">
+                    Editar
+                  </button>
                   <button mat-button color="warn">Eliminar</button>
                 </mat-card-actions>
               </mat-card>

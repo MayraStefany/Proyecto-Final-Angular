@@ -1,0 +1,17 @@
+.grid-header {
+    grid-area: header;
+}
+
+.grid-menu {
+    grid-area: menu;
+}
+
+.grid-main {
+    grid-area: main;
+}
+
+.grid-container {
+    display: grid;
+    grid-template-areas: 'header header header header header header' 'menu main main main main main';
+    background: #303030;
+}

@@ -7,12 +7,13 @@ import { AlumnosComponent } from './components/alumnos/alumnos.component';
 import { MaterialModule } from './material.module';
 import {MatButtonModule} from '@angular/material/button';
 import { EditarAlumnoDialogComponent } from './components/editar-alumno-dialog/editar-alumno-dialog.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
 import { NombresYApellidosPipe } from './pipes/nombres-y-apellidos.pipe';
 import { ToolbarComponent } from './layout/components/toolbar/toolbar.component';
 import { NavbarComponent } from './layout/components/navbar/navbar.component';
 import { TituloEstiloDirective } from './directives/titulo-estilo.directive';
+import { FiltroAlumnosPipe } from './pipes/filtro-alumnos.pipe';
 
 
 
@@ -25,14 +26,16 @@ import { TituloEstiloDirective } from './directives/titulo-estilo.directive';
     NombresYApellidosPipe,
     ToolbarComponent,
     NavbarComponent,
-    TituloEstiloDirective
+    TituloEstiloDirective,
+    FiltroAlumnosPipe
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     MaterialModule,
     MatButtonModule,
-    ReactiveFormsModule
+    ReactiveFormsModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

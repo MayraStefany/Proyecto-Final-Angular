@@ -113,4 +113,9 @@ export class AlumnosComponent {
       data: alumno
     });
   }
+
+  filtrar(event: Event){
+    const filtro = (event.target as HTMLInputElement).value;
+    this.dataSource.filter = filtro.trim().toLowerCase();
+  }
 }

@@ -1,11 +1,13 @@
-<!--<div class="row">
+<!--------------------- FILTRO --------------------->
+<div class="row">
     <mat-form-field>
         <mat-label>
-            Filtrar cursos
+            Filtrar Alumnos
         </mat-label>
-        <input type="text" matInput [(ngModel)]="filtro">
+        <!--<input type="text" matInput [(ngModel)]="filtro">-->
+        <input type="text" matInput (keyup)="filtrar($event)">
     </mat-form-field>
-</div>-->
+</div>
 
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
@@ -21,7 +23,7 @@
   <!-- Columna Nombre -->
   <ng-container matColumnDef="nombrecompleto">
     <th mat-header-cell *matHeaderCellDef> Nombre Completo </th>
-    <td mat-cell *matCellDef="let element"> {{element.apellido | nombresYApellidos:element.nombre}} </td>
+    <td mat-cell *matCellDef="let element" filtroAlumnos> {{element.apellido | nombresYApellidos:element.nombre}} </td>
   </ng-container>
 
   <!-- Columna Edad -->

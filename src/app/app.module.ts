@@ -12,6 +12,7 @@ import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
 import { NombresYApellidosPipe } from './pipes/nombres-y-apellidos.pipe';
 import { ToolbarComponent } from './layout/components/toolbar/toolbar.component';
 import { NavbarComponent } from './layout/components/navbar/navbar.component';
+import { TituloEstiloDirective } from './directives/titulo-estilo.directive';
 
 
 
@@ -23,7 +24,8 @@ import { NavbarComponent } from './layout/components/navbar/navbar.component';
     FormatoFechaPipe,
     NombresYApellidosPipe,
     ToolbarComponent,
-    NavbarComponent
+    NavbarComponent,
+    TituloEstiloDirective
   ],
   imports: [
     BrowserModule,

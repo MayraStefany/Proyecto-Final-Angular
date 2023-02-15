@@ -10,9 +10,8 @@ import { EditarAlumnoDialogComponent } from './components/editar-alumno-dialog/e
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormatoFechaPipe } from './pipes/formato-fecha.pipe';
 import { NombresYApellidosPipe } from './pipes/nombres-y-apellidos.pipe';
-import { NavbarComponent } from './components/layouts/navbar/navbar.component';
-import { ToolbarComponent } from './components/layouts/toolbar/toolbar.component';
-import { FlexLayoutModule } from '@angular/flex-layout';
+import { ToolbarComponent } from './layout/components/toolbar/toolbar.component';
+import { NavbarComponent } from './layout/components/navbar/navbar.component';
 
 
 
@@ -23,8 +22,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     EditarAlumnoDialogComponent,
     FormatoFechaPipe,
     NombresYApellidosPipe,
-    NavbarComponent,
-    ToolbarComponent
+    ToolbarComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,

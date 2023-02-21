@@ -17,7 +17,10 @@ export class AlumnosComponent {
       nombre: 'Maru', 
       apellido: 'Lezama',
       edad: '17', 
-      curso: 'Diseño UX', 
+      curso: {
+        nombre:'Diseño UX',
+        comision: '2321'
+      },
       profesor: {
         nombre:'Paolo', 
         correo:'paoloprofe@gmail.com', 
@@ -31,7 +34,10 @@ export class AlumnosComponent {
       nombre: 'Mayra',
       apellido: 'Torres',
       edad: '20',
-      curso: 'Ciberseguridad', 
+      curso: {
+        nombre:'Ciberseguridad', 
+        comision: '2321'
+      },
       profesor: {
         nombre:'Luciano', 
         correo:'lucianoprofe@gmail.com', 
@@ -45,7 +51,10 @@ export class AlumnosComponent {
       nombre: 'Maicol', 
       apellido: 'Rodriguez',
       edad: '19', 
-      curso: 'Python', 
+      curso: {
+        nombre:'Python', 
+        comision: '2321'
+      },
       profesor: {
         nombre:'Rocio', 
         correo:'rocioprofe@gmail.com',
@@ -59,7 +68,10 @@ export class AlumnosComponent {
       nombre: 'Moises', 
       apellido: 'Ortega',
       edad: '18', 
-      curso: 'Desarrollo de Videojuegos', 
+      curso: {
+        nombre:'Desarrollo de Videojuegos',  
+        comision: '2321'
+      },
       profesor: {
         nombre:'Martin', 
         correo:'martinprofe@gmail.com',
@@ -73,7 +85,10 @@ export class AlumnosComponent {
       nombre: 'Lu', 
       apellido: 'Pardo',
       edad: '19', 
-      curso: 'Cloud Computing', 
+      curso: {
+        nombre:'Cloud Computing', 
+        comision: '2321'
+      },
       profesor: {
         nombre:'Alex', 
         correo:'alexprofe@gmail.com', 
@@ -87,7 +102,10 @@ export class AlumnosComponent {
       nombre: 'Melanie', 
       apellido: 'Munares',
       edad: '22', 
-      curso: 'React', 
+      curso: {
+        nombre: 'React',  
+        comision: '2321'
+      },
       profesor: {
         nombre:'Alexandra', 
         correo:'alexandraprofe@gmail.com', 
@@ -118,4 +136,5 @@ export class AlumnosComponent {
     const filtro = (event.target as HTMLInputElement).value;
     this.dataSource.filter = filtro.trim().toLowerCase();
   }
+  
 }

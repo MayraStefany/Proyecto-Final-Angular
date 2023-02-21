@@ -1,7 +1,7 @@
 <h1 mat-dialog-title>Editar Alumno</h1>
 
 <div mat-dialog-content>
-    <form [formGroup]="formulario">
+    <form [formGroup]="editAlumnoFormGroup">
         <div class="row">
             <input type="text" placeholder="Nombre" formControlName="nombre">
         </div>
@@ -17,6 +17,6 @@
     </form>
 </div>
 <div mat-dialog-actions>
-    <button mat-button>Editar</button>
-    <button mat-button>Cancelar</button>
+    <button mat-button (click)="guardar()" [disabled]="!editAlumnoFormGroup.valid">Editar</button>
+    <button mat-button (click)="cancelar()">Cancelar</button>
 </div>

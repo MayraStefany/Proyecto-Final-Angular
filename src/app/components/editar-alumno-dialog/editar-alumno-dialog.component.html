@@ -1,22 +1,39 @@
 <h1 mat-dialog-title>Editar Alumno</h1>
 
-<div mat-dialog-content>
+<div mat-dialog-content class="dialog-container">
     <form [formGroup]="editAlumnoFormGroup">
+        <!------- Alumno Name ------>
         <div class="row">
-            <input type="text" placeholder="Nombre" formControlName="nombre">
+            <mat-form-field>
+                <mat-label>Nombre Alumno</mat-label>
+                <input matInput type="text"  placeholder="Nombre" formControlName="nombre">
+
+            </mat-form-field>
         </div>
         <div class="row">
-            <input type="text" placeholder="Edad" formControlName="edad">
+            <mat-form-field>
+                <mat-label>Edad</mat-label>
+                <input matInput type="text" placeholder="Edad" formControlName="edad">
+
+            </mat-form-field>
         </div>
         <div class="row">
-            <input type="text" placeholder="Curso" formControlName="curso">
+            <mat-form-field>
+                <mat-label>Curso</mat-label>
+                <input matInput type="text" placeholder="Curso" formControlName="curso">
+
+            </mat-form-field>
         </div>
         <div class="row">
-            <input type="text" placeholder="Profesor" formControlName="profesor">
+            <mat-form-field>
+                <mat-label>Profesor</mat-label>
+                <input matInput type="text" placeholder="Profesor" formControlName="profesor">
+
+            </mat-form-field>
         </div>
     </form>
 </div>
-<div mat-dialog-actions>
-    <button mat-button (click)="guardar()" [disabled]="!editAlumnoFormGroup.valid">Editar</button>
+<div mat-dialog-actions class="dialog-buttons">
+    <button mat-raised-button color="primary" (click)="guardar()" [disabled]="!editAlumnoFormGroup.valid">Editar</button>
     <button mat-button (click)="cancelar()">Cancelar</button>
 </div>

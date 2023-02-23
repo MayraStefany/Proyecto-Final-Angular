@@ -27,6 +27,8 @@ export class EditarAlumnoDialogComponent implements OnInit{
   }
   
   //Funciones dentro del Form
+
+  //Validación
   public editAlumnoFormGroup = new FormGroup({
     nombre: new FormControl(this.data.nombre, [Validators.required, Validators.minLength(10)]),
     edad: new FormControl(this.data.edad, [Validators.required, Validators.minLength(3)]),

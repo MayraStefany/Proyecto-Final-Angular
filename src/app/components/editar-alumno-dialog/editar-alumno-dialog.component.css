@@ -1,0 +1,11 @@
+.dialog-container{
+    min-width: 30rem;
+    min-height: 20rem;
+    display: flex;
+    flex-flow: column wrap;
+    text-align: center;
+}
+
+.dialog-buttons{
+  justify-content: right;
+}

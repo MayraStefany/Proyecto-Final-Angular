@@ -7,28 +7,73 @@
             <mat-form-field>
                 <mat-label>Nombre Alumno</mat-label>
                 <input matInput type="text"  placeholder="Nombre" formControlName="nombre">
-
+                <mat-error *ngIf="validateMinLength('nombre')">
+                    El tamaño mínimo permitido es de 2 caracteres
+                </mat-error>
+                <mat-error *ngIf="validateMaxLength('nombre')">
+                    El tamaño máximo permitido es de 10 caracteres
+                </mat-error>
+                <mat-error *ngIf="validateRequired('nombre')">
+                    No olvides llenar este campo porque es <strong>requerido</strong>
+                </mat-error>
             </mat-form-field>
         </div>
+        <!------- Apellido ------>
+        <div class="row">
+            <mat-form-field>
+                <mat-label>Apellido</mat-label>
+                <input matInput type="text"  placeholder="Apellido" formControlName="apellido">
+                <mat-error *ngIf="validateMinLength('apellido')">
+                    El tamaño mínimo permitido es de 2 caracteres
+                </mat-error>
+                <mat-error *ngIf="validateMaxLength('apellido')">
+                    El tamaño máximo permitido es de 10 caracteres
+                </mat-error>
+                <mat-error *ngIf="validateRequired('apellido')">
+                    No olvides llenar este campo porque es <strong>requerido</strong>
+                </mat-error>
+            </mat-form-field>
+        </div>
+        <!------- Edad ------>
         <div class="row">
             <mat-form-field>
                 <mat-label>Edad</mat-label>
                 <input matInput type="text" placeholder="Edad" formControlName="edad">
-
+                <mat-error *ngIf="validateMinLength('edad')">
+                    El tamaño mínimo permitido es de 1 caracter
+                </mat-error>
+                <mat-error *ngIf="validateRequired('edad')">
+                    No olvides llenar este campo porque es <strong>requerido</strong>
+                </mat-error>
             </mat-form-field>
         </div>
+        <!------- Curso ------>
         <div class="row">
             <mat-form-field>
                 <mat-label>Curso</mat-label>
                 <input matInput type="text" placeholder="Curso" formControlName="curso">
-
+                <mat-error *ngIf="validateMinLength('curso')">
+                    El tamaño mínimo permitido es de 4 caracter
+                </mat-error>
+                <mat-error *ngIf="validateRequired('curso')">
+                    No olvides llenar este campo porque es <strong>requerido</strong>
+                </mat-error>
             </mat-form-field>
         </div>
+        <!------- Profesor ------>
         <div class="row">
             <mat-form-field>
                 <mat-label>Profesor</mat-label>
                 <input matInput type="text" placeholder="Profesor" formControlName="profesor">
-
+                <mat-error *ngIf="validateMinLength('profesor')">
+                    El tamaño mínimo permitido es de 2 caracter
+                </mat-error>
+                <mat-error *ngIf="validateMaxLength('profesor')">
+                    El tamaño máximo permitido es de 10 caracteres
+                </mat-error>
+                <mat-error *ngIf="validateRequired('profesor')">
+                    No olvides llenar este campo porque es <strong>requerido</strong>
+                </mat-error>
             </mat-form-field>
         </div>
     </form>

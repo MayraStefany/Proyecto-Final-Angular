@@ -1,4 +1,5 @@
 import { Injectable } from '@angular/core';
+import { BehaviorSubject, Observable } from 'rxjs';
 import { Alumno } from '../models/alumno';
 
 @Injectable({
@@ -60,7 +61,25 @@ export class AlumnoService {
     },
   ];
 
-  constructor() { }
+  private alumnos$!: BehaviorSubject<Alumno[]>;
+
+  constructor() { 
+    this.alumnos$ = new BehaviorSubject(this.alumnos);
+  }
+
+  obtenerAlumnosPromise(): Promise<Alumno[]>{
+    return new Promise((resolve, reject) => {
+      if(this.alumnos.length > 0){
+        resolve(this.alumnos);
+      }else{
+        reject([]);
+      }
+    });
+  }
+
+  obtenerAlumnosObservable(): Observable<Alumno[]>{
+    return this.alumnos$.asObservable();
+  }
 
   obtenerAlumnos() : Array<Alumno>{
     return this.alumnos;
@@ -68,6 +87,7 @@ export class AlumnoService {
 
   agregarAlumno(alumno: Alumno){
     this.alumnos.push(alumno);
+    this.alumnos$.next(this.alumnos);
     console.log('Se agrego', this.alumnos);
   }
 }

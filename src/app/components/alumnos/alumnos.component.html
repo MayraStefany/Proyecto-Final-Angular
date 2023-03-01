@@ -5,7 +5,7 @@
             Filtrar Alumnos
         </mat-label>
         <!--<input type="text" matInput [(ngModel)]="filtro">-->
-        <input type="text" matInput (keyup)="filtrar($event)">
+        <input type="text" matInput (keyup)="filtrar($event)" #input>
     </mat-form-field>
 </div>
 
@@ -64,6 +64,12 @@
 
   <tr mat-header-row *matHeaderRowDef="columnas"></tr>
   <tr mat-row *matRowDef="let row; columns: columnas;"></tr>
+
+  <!--No hay la Data-->
+  <tr class="mat-row" *matNoDataRow>
+    <td class="mat-cell" colspan="4">No hay datos que coincidan con el filtro "{{input.value}}"</td>
+  </tr>
+
 </table>
 
 

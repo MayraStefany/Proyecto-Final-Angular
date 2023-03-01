@@ -13,3 +13,8 @@
 .text-matriculado{
     color:#b0bdc5;
 }
+
+.mat-cell{
+    color: #dc3545;
+    padding: 15px;
+}

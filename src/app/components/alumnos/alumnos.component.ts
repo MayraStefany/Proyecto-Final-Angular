@@ -126,10 +126,66 @@ export class AlumnosComponent {
 
   }
 
-  editarmodal(alumno: Alumno){
+ /* editarmodal(alumno: Alumno){
     const dialogRef = this.dialog.open(EditarAlumnoDialogComponent, {
       data: alumno
     });
+  }*/
+
+  private updateAlumno(updatedAlumno: Alumno) {
+    const updatedDatasource = this.dataSource.data.map( s => s.id == updatedAlumno.id
+        ? {...s,
+        nombre: updatedAlumno.nombre,
+        apellido: updatedAlumno.apellido,
+        edad: updatedAlumno.edad,
+        curso: updatedAlumno.curso,
+        profesor: updatedAlumno.profesor,
+        }
+        : s
+      );
+      alert(updatedAlumno.curso.nombre);
+    this.dataSource.data = updatedDatasource;
+  }
+
+  public editarAlumno(selectedAlumno: Alumno): void {
+    console.log(selectedAlumno);
+    if(selectedAlumno){
+      let matDialog = this.dialog.open(EditarAlumnoDialogComponent, {
+        width: '38rem',
+        height: '35rem',
+        data: selectedAlumno    /*selectedAlumno / alumno */
+      })
+
+      matDialog.afterClosed().subscribe(resultado => {
+
+        if(resultado){
+          let updatedAlumno: Alumno = {
+            id: selectedAlumno.id,
+            nombre: resultado.nombre,
+            apellido: resultado.apellido,
+            edad: resultado.edad,
+            curso: {
+              nombre: resultado.curso.nombre,
+              comision: selectedAlumno.curso.comision,
+            },
+            profesor: {
+              nombre:resultado.profesor.nombre, 
+              correo:selectedAlumno.profesor.correo, 
+              telefono: selectedAlumno.profesor.telefono,
+              fechaIngreso: selectedAlumno.profesor.fechaIngreso,
+            },
+            fechaInicioCurso: selectedAlumno.fechaInicioCurso
+          }
+          this.updateAlumno(updatedAlumno);
+        }
+      });
+    }
+    
+  }
+
+  public eliminarAlumno(selectedAlumno: Alumno): void {
+    const updatedDatasource = this.dataSource.data.filter(s => s.id !== selectedAlumno.id);
+    this.dataSource.data = updatedDatasource;
   }
 
   filtrar(event: Event){

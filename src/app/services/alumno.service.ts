@@ -14,6 +14,7 @@ export class AlumnoService {
       apellido: 'Torres',
       edad: '20 - prueba',
       curso: {
+        id: 1,
         nombre:'Ciberseguridad', 
         comision: '2321'
       },
@@ -31,6 +32,7 @@ export class AlumnoService {
       apellido: 'Ortega',
       edad: '18 - prueba', 
       curso: {
+        id: 2,
         nombre:'Desarrollo de Videojuegos',  
         comision: '2321'
       },
@@ -48,6 +50,7 @@ export class AlumnoService {
       apellido: 'Munares',
       edad: '22 - prueba', 
       curso: {
+        id: 3,
         nombre: 'React',  
         comision: '2321'
       },

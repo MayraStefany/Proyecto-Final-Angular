@@ -10,6 +10,7 @@ export const alumnos = {
               apellido: 'Torres',
               edad: '20 - utilizando UseValue',
               curso: {
+                id: 1,
                 nombre:'Ciberseguridad', 
                 comision: '2321'
               },
@@ -27,6 +28,7 @@ export const alumnos = {
               apellido: 'Ortega',
               edad: '18 - utilizando UseValue', 
               curso: {
+                id: 2,
                 nombre:'Desarrollo de Videojuegos',  
                 comision: '2321'
               },
@@ -44,6 +46,7 @@ export const alumnos = {
               apellido: 'Munares',
               edad: '22 - utilizando UseValue', 
               curso: {
+                id: 3,
                 nombre: 'React',  
                 comision: '2321'
               },

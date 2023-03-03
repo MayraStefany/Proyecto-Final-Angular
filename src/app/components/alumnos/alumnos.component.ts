@@ -18,6 +18,7 @@ export class AlumnosComponent {
       apellido: 'Lezama',
       edad: '17', 
       curso: {
+        id:1,
         nombre:'Diseño UX',
         comision: '2321'
       },
@@ -35,6 +36,7 @@ export class AlumnosComponent {
       apellido: 'Torres',
       edad: '20',
       curso: {
+        id: 2,
         nombre:'Ciberseguridad', 
         comision: '2321'
       },
@@ -52,6 +54,7 @@ export class AlumnosComponent {
       apellido: 'Rodriguez',
       edad: '19', 
       curso: {
+        id: 3,
         nombre:'Python', 
         comision: '2321'
       },
@@ -69,6 +72,7 @@ export class AlumnosComponent {
       apellido: 'Ortega',
       edad: '18', 
       curso: {
+        id: 4,
         nombre:'Desarrollo de Videojuegos',  
         comision: '2321'
       },
@@ -86,6 +90,7 @@ export class AlumnosComponent {
       apellido: 'Pardo',
       edad: '19', 
       curso: {
+        id: 5,
         nombre:'Cloud Computing', 
         comision: '2321'
       },
@@ -103,6 +108,7 @@ export class AlumnosComponent {
       apellido: 'Munares',
       edad: '22', 
       curso: {
+        id: 6,
         nombre: 'React',  
         comision: '2321'
       },
@@ -165,6 +171,7 @@ export class AlumnosComponent {
             apellido: resultado.apellido,
             edad: resultado.edad,
             curso: {
+              id: selectedAlumno.id,
               nombre: resultado.curso.nombre,
               comision: selectedAlumno.curso.comision,
             },

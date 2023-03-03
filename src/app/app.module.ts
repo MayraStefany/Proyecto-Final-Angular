@@ -14,6 +14,7 @@ import { ToolbarComponent } from './layout/components/toolbar/toolbar.component'
 import { NavbarComponent } from './layout/components/navbar/navbar.component';
 import { TituloEstiloDirective } from './directives/titulo-estilo.directive';
 import { FiltroAlumnosPipe } from './pipes/filtro-alumnos.pipe';
+import {HttpClientModule} from "@angular/common/http";
 
 
 
@@ -35,7 +36,8 @@ import { FiltroAlumnosPipe } from './pipes/filtro-alumnos.pipe';
     MaterialModule,
     MatButtonModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

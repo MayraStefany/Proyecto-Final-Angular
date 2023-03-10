@@ -1,15 +1,16 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { MatDialog } from '@angular/material/dialog';
 import { Alumno } from 'src/app/models/alumno';
 import { EditarAlumnoDialogComponent } from '../editar-alumno-dialog/editar-alumno-dialog.component';
 import { MatTableDataSource } from '@angular/material/table';
+import { AlumnoService } from 'src/app/services/alumno.service';
 
 @Component({
   selector: 'app-alumnos',
   templateUrl: './alumnos.component.html',
   styleUrls: ['./alumnos.component.css']
 })
-export class AlumnosComponent {
+export class AlumnosComponent implements OnInit{
   filtro: string = '';
   alumnos: Alumno[] =[
     {
@@ -127,9 +128,22 @@ export class AlumnosComponent {
 
 
   constructor(
-    private dialog: MatDialog
+    //Inicializamos  dialog: MatDialog 
+    private dialog: MatDialog,
+
+    //Inicializamos   AlumnoService  -> para injection de dependencias
+    private alumnoService: AlumnoService
   ){
 
+  }
+
+  ngOnInit(): void {
+    /*//AQUI llamamos al [alumno.service.ts] de los [services] -> "Descomentar para traer el servicio en ejecución"
+    //Instanciando el MatTableDataSource
+    this.alumnoService.obtenerAlumnosObservable().subscribe((alumnos: Alumno[]) => {
+      //se agregan datos al MatTableDataSource
+      this.dataSource.data = alumnos
+    })*/
   }
 
  /* editarmodal(alumno: Alumno){

@@ -15,6 +15,8 @@ import { NavbarComponent } from './layout/components/navbar/navbar.component';
 import { TituloEstiloDirective } from './directives/titulo-estilo.directive';
 import { FiltroAlumnosPipe } from './pipes/filtro-alumnos.pipe';
 import {HttpClientModule} from "@angular/common/http";
+import { AppRoutingModule } from './app-routing.module';
+import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 
 
 
@@ -28,7 +30,8 @@ import {HttpClientModule} from "@angular/common/http";
     ToolbarComponent,
     NavbarComponent,
     TituloEstiloDirective,
-    FiltroAlumnosPipe
+    FiltroAlumnosPipe,
+    PageNotFoundComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +40,8 @@ import {HttpClientModule} from "@angular/common/http";
     MatButtonModule,
     ReactiveFormsModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    AppRoutingModule
   ],
   providers: [],
   bootstrap: [AppComponent]

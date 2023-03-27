@@ -1,4 +1,4 @@
-import { Alumno } from "../models/alumno";
+import { Alumno } from "../shared/models/alumno";
 
 
 export const alumnos = {

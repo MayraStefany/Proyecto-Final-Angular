@@ -3,7 +3,7 @@ import { MatDialog } from '@angular/material/dialog';
 import { Alumno } from 'src/app/shared/models/alumno';
 import { EditarAlumnoDialogComponent } from '../editar-alumno-dialog/editar-alumno-dialog.component';
 import { MatTableDataSource } from '@angular/material/table';
-import { AlumnoService } from 'src/app/services/alumno.service';
+import { AlumnoService } from 'src/app/shared/services/alumno.service';
 
 @Component({
   selector: 'app-alumnos',

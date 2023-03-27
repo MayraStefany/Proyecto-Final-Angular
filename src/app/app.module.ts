@@ -16,7 +16,7 @@ import { TituloEstiloDirective } from './shared/directives/titulo-estilo.directi
 import { FiltroAlumnosPipe } from './shared/pipes/filtro-alumnos.pipe';
 import {HttpClientModule} from "@angular/common/http";
 import { AppRoutingModule } from './app-routing.module';
-import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
+import { PageNotFoundComponent } from './core/components/page-not-found/page-not-found.component';
 
 
 
